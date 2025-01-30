@@ -1,11 +1,18 @@
 <template>
-  SCAN
+  <div v-if="dataUser">
+    <p>{{dataUser}}</p>
+  <button>confirm</button>
+  </div>
+    <div v-else>
   <button @click="scan()">SCAN</button>
+  </div>
 </template>
 
 <script setup>
-import {onMounted} from "vue";
+import {ref,onMounted} from "vue";
 import {liff} from "@line/liff";
+
+const dataUser = ref()
 
  onMounted(async () => {
  console.log("mount")
@@ -29,6 +36,7 @@ function scan(){
   .scanCodeV2()
   .then((result) => {
     console.log(result)
+    dataUser.value = result
     // result = { value: "" }
   })
   .catch((error) => {
