@@ -25,11 +25,14 @@ import {liff} from "@line/liff";
 })
 
 function scan(){
-   if (liff.scanCode) {
-  liff.scanCode().then((result) => {
+   liff
+  .scanCodeV2()
+  .then((result) => {
     console.log(result)
     // result = { value: "" }
+  })
+  .catch((error) => {
+    console.log("error", error);
   });
-}
 }
 </script>
