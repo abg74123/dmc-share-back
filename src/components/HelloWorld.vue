@@ -18,7 +18,7 @@ const dataUser = ref()
  console.log("mount")
     try {
       // * Config Line Liff
-      await liff.init({ liffId: "2006835240-Vb7KBzNz", withLoginOnExternalBrowser: true })
+      await liff.init({ liffId: "2006835615-g520mXPq", withLoginOnExternalBrowser: true })
       // ^ Check Line Liff Login ?
       if (liff.isLoggedIn()) {
         const profile = await liff.getProfile()
