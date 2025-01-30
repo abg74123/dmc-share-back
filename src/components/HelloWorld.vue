@@ -40,6 +40,7 @@ function scan(){
     // result = { value: "" }
   })
   .catch((error) => {
+    alert(error)
     console.log("error", error);
   });
 }
