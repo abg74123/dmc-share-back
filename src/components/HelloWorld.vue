@@ -50,6 +50,7 @@ function scan(){
 <style>
   .btn-scan{
     display: flex;
+    flex-direction: column;
     gap:15px;
     align-items: center;
     margin: auto;
