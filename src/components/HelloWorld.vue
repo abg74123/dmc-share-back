@@ -1,11 +1,11 @@
 <template>
-  <div v-if="dataUser">
+  <template v-if="dataUser">
     <p>{{dataUser}}</p>
-  <button>confirm</button>
-  </div>
-    <div v-else>
-  <button @click="scan()">SCAN</button>
-  </div>
+  <button class="btn-confirm">CONFIRM</button>
+  </template>
+    <template v-else>
+        <button class="btn-scan" @click="scan()">SCAN <img class="img-icon" src="../assets/Pictogrammers-Material-Qrcode-scan.512.png" alt=""></button>
+  </template>
 </template>
 
 <script setup>
@@ -45,3 +45,51 @@ function scan(){
   });
 }
 </script>
+
+
+<style>
+  .btn-scan{
+    display: flex;
+    gap:15px;
+    align-items: center;
+    margin: auto;
+    cursor: pointer;
+    font-size: 30px;
+    padding:10px 30px;
+    border:0;
+    border-radius: 10px;
+    color: #FFF;
+    background-color: deepskyblue;
+          transition-duration: 0.5s;
+
+
+  }
+    .btn-scan:hover{
+      transition-duration: 0.5s;
+    font-size: 35px;
+  }
+
+    .btn-confirm{
+    display: flex;
+    gap:15px;
+    align-items: center;
+    margin: auto;
+    cursor: pointer;
+    font-size: 30px;
+    padding:10px 30px;
+    border:0;
+    border-radius: 10px;
+    color: #FFF;
+    background-color: green;
+          transition-duration: 0.5s;
+
+
+  }
+    .btn-confirm:hover{
+      transition-duration: 0.5s;
+    font-size: 35px;
+  }
+    .img-icon{
+      width: 50px;
+    }
+</style>
