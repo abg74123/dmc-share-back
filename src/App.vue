@@ -22,6 +22,7 @@ export default {
   color: #2c3e50;
   height: calc(100vh - 16px);
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 </style>
